@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" van="width=device-width, initial-scale=1.0" />
+    <title>Doc</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto+Slab?icon.platform=web">
+  </head>
+  <style>
+    input {
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+    }
+    table,td,th{
+      border: 2px solid;
+      
+    }
+    table{
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    
+    }
+    .form{
+      margin-top:90px;
+      margin-left: auto;
+      margin-right: auto;
+      background:rgb(235, 209, 195) ;
+      width: 700px;
+      height: auto;
+      border-radius: 10px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 2px  grey;
+     
+    }
+    .thongtin{
+      font-family: Roboto Slab;
+      position: relative;
+      top: 20px;
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+      font-family: Roboto Slab;
+    }
+  </style>
+  <body>
+    <div class="form">
+      <h2 class="thongtin">THÔNG TIN</h2>
+    <table></table>
+
+    
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      onclick="openModalAdd()"
+      
+    >
+      ADD
+    </button>
+    
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+            <input type="text" placeholder="Name" id="name" /><br />
+            <input type="text" placeholder="Age" id="age" /><br />
+            <input type="text" placeholder="Address" id="address" /><br />
+            <input type="text" placeholder="Hobbies" id="hobbies" /><br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="close"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="saveFunction()"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body">
+            <h3>Chac chan xoa thong tin nay ?</h3>
+            <div style="display: flex; justify-content: center">
+              <button type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="close" onclick="closeModalDelete()">NO</button>
+              <span style="margin: 5px"></span>
+              <button  type="button"
+              class="btn btn-primary" onclick="deleteFunction()">YES</button>
+            </div>
+          </div>
+          <div class="modal-footer" style="display: none;">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="close-modal-delete"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="./btjs21.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+</html>
